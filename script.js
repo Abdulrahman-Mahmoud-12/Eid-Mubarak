@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
       answer: "pencil",
     },
     { question: "What has an eye, but cannot see?", answer: "needle" },
-    { question: "How many months of the year has 28 days?", answer: "3" },
+    { question: "How many months of the year has 28 days?", answer: "12" },
     {
       question: "What is always in front of you but can’t be seen?",
       answer: "future",
@@ -46,6 +46,11 @@ document.addEventListener("DOMContentLoaded", () => {
         "If you were in a race and passed the third runner, what is your position now?",
       answer: "third",
     },
+    { question: "What gets wetter the more it dries?", answer: "towel" },
+    { question: "What is full of holes but still holds water?", answer: "sponge" },
+    { question: "If you drop me, I break, but if you smile at me, I smile back. What am I?", answer: "mirror" },
+    { question: "I go up, but I never come down. What am I?", answer: "age" },
+    { question: "I fly without wings, I cry without eays. Whever I go, darkness follows me. What am I?", answer: "cloud" },
   ];
 
   function showScreen(screenToShow) {
