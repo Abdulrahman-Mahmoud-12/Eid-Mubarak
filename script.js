@@ -24,33 +24,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const puzzles = [
     {
-      question:
-        "I am taken from a mine, and shut up in a wooden case, from which I am never released, and yet I am used by almost everybody. What am I?",
-      answer: "pencil",
+      question: "حاجة كل ما تاخد منها بتكبر، اية هى ؟",
+      answer: "الحففرة",
     },
-    { question: "What has an eye, but cannot see?", answer: "needle" },
-    { question: "How many months of the year has 28 days?", answer: "12" },
+    { question: "عندى عين لكن مش بشوفو ابقى مين؟", answer: "الإبرة" },
+    { question: "كم شهر فى السنة فيه 28 يوم؟", answer: "12" },
     {
-      question: "What is always in front of you but can’t be seen?",
-      answer: "future",
+      question: "اية الحاجة اللى دايمًا قدامك بس مبتشوفهاش؟",
+      answer: "المستقبل",
     },
-    { question: "What has to be broken before you can use it?", answer: "egg" },
+    { question: "اية الحاجة اللى بتكسرها قبل ما تستخدمها؟", answer: "البيضة" },
     {
-      question:
-        "If you have 3 apples and you take away 2, how many do you have?",
+      question: "لو فى 3 تفاحات وخدت منهم 2 يتبقى معاك كام؟",
       answer: "2",
     },
-    { question: "How many days that Eid al-Fitr have?", answer: "4" },
+    { question: "عيد الفطر فيه كام يوم؟", answer: "4" },
+    {
+      question: "لو انت فى شباق وعديت المتسابق الثالث يبقى انت الكام؟",
+      answer: "الثالث",
+    },
+    {
+      question: "حاجة بتملى اى مكان من غير ما تاخد أى مساحة، اية هى؟",
+      answer: "الضوء",
+    },
+    {
+      question: "حاجة مليانة ثقوب بس بتحفظ الماية، تبقى اية؟",
+      answer: "إسفنجة",
+    },
+    {
+      question: "لو وقعتنى بتكسر ، ولو ضحكتلى بضحكلك ابقي إية؟",
+      answer: "المراية",
+    },
+    { question: "دايمًا  بزيد وعمرى ما بقل، ابقا اية؟", answer: "العمر" },
     {
       question:
-        "If you were in a race and passed the third runner, what is your position now?",
-      answer: "third",
+        "بقدر أطير من غير جناحات، وبعيط من غير دموع، ومكان ما بروح الضلمة بتيجى ورايا، ابقا اية؟",
+      answer: "السحابة",
     },
-    { question: "What gets wetter the more it dries?", answer: "towel" },
-    { question: "What is full of holes but still holds water?", answer: "sponge" },
-    { question: "If you drop me, I break, but if you smile at me, I smile back. What am I?", answer: "mirror" },
-    { question: "I go up, but I never come down. What am I?", answer: "age" },
-    { question: "I fly without wings, I cry without eays. Whever I go, darkness follows me. What am I?", answer: "cloud" },
+    { question: "حاجة تقدر تكسرها من غير ما تلمسها، اية هى؟", answer: "الوعد" },
   ];
 
   function showScreen(screenToShow) {
