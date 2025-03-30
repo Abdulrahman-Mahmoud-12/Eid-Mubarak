@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎉 Eid Mubarak HR Team! 🎉</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Main Application Container -->
+    <div id="app-container">
+      <!-- Welcome Screen -->
+      <div id="welcome-screen" class="screen active">
+        <div class="content-box">
+          <h1>Eid Mubarak!</h1>
+          <p class="hr-message">
+            To the amazing Enactus HR Team,<br />wishing you a joyous and
+            blessed Eid al-Fitr!
+          </p>
+          <input type="text" id="name-input" placeholder="Enter your name" />
+          <button id="start-button">✨ Start Celebration ✨</button>
+          <p id="name-error" class="error-message hidden">
+            Please enter your name!
+          </p>
+        </div>
+      </div>
+
+      <!-- Puzzle Screen -->
+      <div id="puzzle-screen" class="screen">
+        <div class="content-box">
+          <h2>Quick mind Challenge! 🧠</h2>
+          <p id="puzzle-question">Solve this to join the celebration:</p>
+          <p id="puzzle-text"></p>
+          <!-- {/* Puzzle text injected here */} -->
+          <input type="text" id="puzzle-answer" placeholder="Your answer" />
+          <button id="submit-answer">Check Answer</button>
+          <p id="retry-message" class="error-message hidden">
+            Oops! Not quite. Give it another try! 😉
+          </p>
+        </div>
+      </div>
+
+      <!-- Celebration Screen -->
+      <div id="celebration-screen" class="screen">
+        <div id="animation-container"></div>
+        <!-- {/* For balloons/confetti */} -->
+        <div class="content-box celebration-box">
+          <h2 id="eid-greeting">Happy Eid! 🎉</h2>
+          <p id="personal-wish">May this Eid bring you joy and success!</p>
+          <p id="personal-wish">
+            Wishing you an Eid as wonderful as your heart! May joy, success, and
+            sweet moments fill your days. Enjoy, smile, and keep shining! 💙🎉
+          </p>
+          <p class="dedication">
+            Made with ❤️ by Eng_Abdulrahman for the best HR team! ✨
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Background Audio -->
+    <audio id="eid-music" loop>
+      <source src="eid_music.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>

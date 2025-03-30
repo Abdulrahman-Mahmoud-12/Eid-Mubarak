@@ -1,0 +1,259 @@
+/* Basic Reset & Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* Ensure the background image covers the whole page */
+  background-image: url("images.jpeg"); /* <<<< CHANGE THIS IMAGE */
+  background-size: cover;
+  background-position: center;
+  background-repeat: round;
+  overflow: hidden; /* Hide overflow for animations */
+  position: relative; /* Needed for absolute positioning of animations */
+  color: #333;
+}
+
+#app-container {
+  position: relative; /* Allows screens to overlap */
+  width: 90%;
+  max-width: 500px;
+}
+
+/* Screen Styling & Transitions */
+.screen {
+  position: absolute; /* Position screens on top of each other */
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0; /* Start hidden */
+  visibility: hidden;
+  transition: opacity 0.7s ease-in-out, visibility 0.7s ease-in-out;
+  display: flex; /* Use flexbox for centering content */
+  justify-content: center;
+  align-items: center; /* Center content vertically */
+  min-height: 60vh; /* Give screens some height */
+  padding: 20px;
+}
+
+.screen.active {
+  opacity: 1;
+  visibility: visible;
+  position: relative; /* Make active screen flow normally */
+}
+
+/* Content Box Styling */
+.content-box {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 100%;
+}
+
+.celebration-box {
+  background-color: rgba(255, 255, 255, 0.95); /* Slightly less transparent */
+  z-index: 5; /* Ensure text is above animations */
+  position: relative; /* Needed for z-index */
+}
+
+/* Headings and Text */
+h1,
+h2 {
+  font-family: "Pacifico", cursive; /* Festive font */
+  color: #2a9d8f; /* Teal color */
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 2.8em;
+}
+
+h2 {
+  font-size: 2.2em;
+}
+
+p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 1.2em;
+  font-family: cursive;
+  font-style: italic;
+}
+
+.hr-message {
+  font-family: math;
+  font-weight: 600;
+  color: #e76f51; /* Coral color */
+  font-size: 1.2em;
+  margin-bottom: 25px;
+}
+
+/* Input and Button Styling */
+input[type="text"] {
+  width: 80%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 25px; /* Rounded corners */
+  font-size: 1em;
+  text-align: center;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #2a9d8f;
+  box-shadow: 0 0 5px rgba(42, 157, 143, 0.5);
+}
+
+button {
+  padding: 12px 25px;
+  background: linear-gradient(
+    135deg,
+    #f7797d,
+    #fbd786,
+    #c6ffdd
+  ); /* Festive gradient */
+  color: #444;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Error Messages */
+.error-message {
+  color: #d90429; /* Red color for errors */
+  font-size: 0.9em;
+  margin-top: -10px; /* Reduce space above */
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Dedication Text */
+.dedication {
+  font-size: 0.85em;
+  color: #777;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+/* Animation Container */
+#animation-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none; /* Allows clicking through the container */
+  z-index: 1; /* Behind content box text */
+}
+
+/* Balloon Animation */
+.balloon {
+  position: absolute;
+  bottom: -150px; /* Start below screen */
+  width: 50px;
+  height: 65px;
+  background-color: red; /* Placeholder, will be randomized */
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; /* Balloon shape */
+  opacity: 0.8;
+  animation: rise 10s infinite ease-in;
+}
+
+.balloon::before {
+  /* Balloon knot */
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: inherit; /* Same color as balloon */
+  border-radius: 50%;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-120vh) rotate(15deg); /* Rise above viewport */
+    opacity: 0;
+  }
+}
+
+/* Confetti Animation */
+.confetti {
+  position: absolute;
+  top: -20px; /* Start above screen */
+  width: 10px;
+  height: 10px;
+  background-color: blue; /* Placeholder, will be randomized */
+  opacity: 0.9;
+  animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotateZ(0deg);
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(110vh) rotateZ(720deg); /* Fall below viewport */
+    opacity: 0;
+  }
+}
+
+/* Responsive Adjustments (Optional) */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.2em;
+  }
+  h2 {
+    font-size: 1.8em;
+  }
+  p {
+    font-size: 1.2em;
+  }
+  .content-box {
+    padding: 20px;
+  }
+  input[type="text"] {
+    width: 90%;
+  }
+}
