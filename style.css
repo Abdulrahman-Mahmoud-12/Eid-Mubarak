@@ -15,7 +15,7 @@ body {
   background-image: url("images.jpeg"); /* <<<< CHANGE THIS IMAGE */
   background-size: cover;
   background-position: center;
-  background-repeat: inherit;
+  background-repeat: initial;
   overflow: hidden; /* Hide overflow for animations */
   position: relative; /* Needed for absolute positioning of animations */
   color: #333;
